@@ -13,6 +13,9 @@ public class GetConnection {
     public boolean getIsConnected(){
         boolean isConnected = false;
 
+        if(table.getEntry("connection").equals("true"))
+            isConnected = true;
+
         return isConnected;
     }
 }

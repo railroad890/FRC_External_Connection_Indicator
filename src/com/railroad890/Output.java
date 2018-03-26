@@ -10,12 +10,14 @@ public class Output {
         _arduino = new Arduino(portDescription);
     }
 
-    public void sendString(String s){
+    public void openConnection(){
         boolean isOpen = false;
         while(!isOpen) {
             isOpen = _arduino.openConnection();
         }
+    }
 
+    public void sendString(String s){
         _arduino.serialWrite(s);
     }
 }
